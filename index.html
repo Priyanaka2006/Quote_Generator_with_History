@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A quiet little corner for thoughtful words. Discover a quote and keep the ones that stay with you."
+    />
+    <meta name="theme-color" content="#f5f3ec" />
+    <title>Stillword — A little pause for thought</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Stillword home">
+          <span class="brand-mark" aria-hidden="true">s.</span>
+          <span>stillword</span>
+        </a>
+        <div class="topbar-note">
+          <span class="live-dot" aria-hidden="true"></span>
+          A little pause for thought
+        </div>
+        <a class="about-link" href="#about">Our little idea <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span>01</span> &nbsp; YOUR DAILY MOMENT</p>
+          <h1 id="page-title">Words to <em>sit with.</em></h1>
+          <p class="intro-copy">
+            A small collection of big thoughts. Find a line that feels like yours, and keep it close.
+          </p>
+        </section>
+
+        <div class="content-grid">
+          <section class="quote-column" aria-label="Quote of the moment">
+            <article class="quote-card">
+              <div class="quote-card-shade"></div>
+              <div class="quote-card-content">
+                <div class="quote-card-top">
+                  <span class="image-caption"><span aria-hidden="true">✳</span> A MOMENT OF STILLNESS</span>
+                  <span class="quote-count" id="quote-count">YOUR NEXT THOUGHT</span>
+                </div>
+                <div class="quote-copy-wrap">
+                  <span class="opening-quote" aria-hidden="true">“</span>
+                  <blockquote id="quote-text" aria-live="polite" aria-busy="true">
+                    Finding a little inspiration for you...
+                  </blockquote>
+                  <p class="quote-author" id="quote-author"></p>
+                </div>
+                <div class="quote-card-bottom">
+                  <span class="image-credit">A breath between the busy</span>
+                  <span class="sun-mark" aria-hidden="true">✳</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="quote-actions">
+              <button class="button button-primary" id="new-quote" type="button">
+                <span class="sparkle" aria-hidden="true">✳</span>
+                <span id="new-quote-label">Find another thought</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button class="button button-secondary" id="copy-quote" type="button" disabled>
+                <span aria-hidden="true">▢</span> Copy quote
+              </button>
+            </div>
+            <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+
+            <div class="gentle-reminder">
+              <span class="reminder-icon" aria-hidden="true">✦</span>
+              <p><strong>Take what you need.</strong> The right words have a way of finding us at the right time.</p>
+            </div>
+          </section>
+
+          <aside class="history-panel" aria-labelledby="history-title">
+            <div class="history-heading">
+              <div>
+                <p class="eyebrow history-eyebrow"><span>02</span> &nbsp; YOUR COLLECTION</p>
+                <h2 id="history-title">Saved <em>moments</em></h2>
+              </div>
+              <span class="history-total" id="history-total" aria-label="Saved quote count">0</span>
+            </div>
+            <p class="history-intro">The thoughts you’ve paused to keep.</p>
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <span class="visually-hidden">Search your saved quotes</span>
+              <input id="history-search" type="search" placeholder="Find a thought..." autocomplete="off" />
+              <kbd>/</kbd>
+            </label>
+            <div class="history-list" id="history-list" aria-live="polite" aria-busy="true">
+              <div class="history-loading">Gathering your saved moments...</div>
+            </div>
+            <div class="history-footer">
+              <span><span class="lock-icon" aria-hidden="true">⌑</span> Saved on this device</span>
+              <button class="text-button" id="clear-history" type="button" disabled>Clear all</button>
+            </div>
+          </aside>
+        </div>
+
+        <section class="intentions-section" aria-labelledby="intentions-title">
+          <div class="intentions-heading">
+            <div>
+              <p class="eyebrow"><span>03</span> &nbsp; A LITTLE EXTRA INSPIRATION</p>
+              <h2 id="intentions-title">For wherever you are <em>today.</em></h2>
+            </div>
+            <p>Choose a little reminder to carry with you.</p>
+          </div>
+          <div class="intention-cards">
+            <button class="intention-card intention-card-sage" type="button" data-intention="Make room for the good things." disabled>
+              <span class="intention-card-top"><span>01 &nbsp; A SOFTER PACE</span><span aria-hidden="true">✳</span></span>
+              <span class="intention-quote">Make room for<br />the good things.</span>
+              <span class="intention-card-bottom">A gentle reminder <span aria-hidden="true">↗</span></span>
+              <span class="intention-sun" aria-hidden="true">✳</span>
+            </button>
+            <button class="intention-card intention-card-peach" type="button" data-intention="You are allowed to begin again." disabled>
+              <span class="intention-card-top"><span>02 &nbsp; A FRESH START</span><span aria-hidden="true">✳</span></span>
+              <span class="intention-quote">You’re allowed to<br />begin again.</span>
+              <span class="intention-card-bottom">A gentle reminder <span aria-hidden="true">↗</span></span>
+              <span class="intention-sun" aria-hidden="true">✳</span>
+            </button>
+            <button class="intention-card intention-card-blue" type="button" data-intention="Small steps can take you somewhere lovely." disabled>
+              <span class="intention-card-top"><span>03 &nbsp; ONE STEP AT A TIME</span><span aria-hidden="true">✳</span></span>
+              <span class="intention-quote">Small steps can take<br />you somewhere lovely.</span>
+              <span class="intention-card-bottom">A gentle reminder <span aria-hidden="true">↗</span></span>
+              <span class="intention-sun" aria-hidden="true">✳</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="about-strip" id="about" aria-label="About Stillword">
+          <span class="about-flower" aria-hidden="true">✳</span>
+          <p>Made for the in-between moments.</p>
+          <span class="about-divider" aria-hidden="true"></span>
+          <p>Powered by curiosity, saved with care.</p>
+          <span class="about-end-mark" aria-hidden="true">✳</span>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>STILLWORD <span class="footer-dot">·</span> A PLACE FOR WORDS THAT LINGER</span>
+        <span>Quotes kindly brought to you by <a href="https://dummyjson.com/docs/quotes" target="_blank" rel="noreferrer">DummyJSON</a></span>
+      </footer>
+    </div>
+  </body>
+</html>
